@@ -1,3 +1,49 @@
+/* Importing roboto and euphoria script fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Poppins:ital,wght@0,300;0,400;1,700;1,900&display=swap');
+
+:root {
+  /* Main colors and font styling */
+  --primary-color: #f5f5dc; /* Off-white cream color */
+  --header-color: #FFD700; /* Gold color */
+  --secondary-color: #1a1a1a; /* Charcoal color */
+  --tertiary-color: #c91414; /* Cherry Red color */
+  --quaternary-color: #024023; /* Forest Green color */
+
+}
+
+/*Euphoria Script font styling */
+.euphoria-script-regular {
+  font-family: "Euphoria Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+/*Poppins font styling */
+.poppins-light {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-bold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.poppins-black-italic {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+.poppins-black {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
 /* For google icons */
 .material-symbols-outlined {
   font-variation-settings:
@@ -5,4 +51,324 @@
   'wght' 400,
   'GRAD' 0,
   'opsz' 24
+}
+
+/*Body styling, which is intended to be a mobile-first styling with checkpoints introduced later for larger screens. */
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  width: 350px;
+  height: auto;
+  border-radius: 3rem;
+}
+
+/* Header and child element styling, also mobile friendly */
+section.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--header-color);
+  padding: 1rem;
+  margin: 0;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+section#headings-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+h1#artist-name {
+  font-size: 5rem;
+  margin: 0.25rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+p#artist-tagline {
+  width: 25%;
+  font-size: 1rem;
+  margin: 0.25rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+button#menu-opener {
+  width: 90vw;
+  height: 50px;
+  justify-self: center;
+  margin: 0.25rem;
+  border-radius: 1rem;
+  border: var(--secondary-color) solid 3px;
+  background-color: var(--header-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+/* Invisible class used to hide elements */
+.invisible {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+/* general flex-child section styling followed by styling for individual sections
+and child div elements. */
+section.flex-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--standard-padding);
+  margin: 0;
+}
+section#introhero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 5%;
+}
+
+#intro-text1 {
+  font-size: 2rem;
+  margin: 1rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+#intro-text2 {
+  font-size: 1rem;
+  margin: 1rem;
+  color: var(--secondary-color);
+  text-align: center;
+  width: 80%;
+}
+
+button#learn-more {
+  width: 30vw;
+  height: 50px;
+  justify-self: center;
+  margin: 0.25rem;
+  border-radius: 1rem;
+  border: var(--secondary-color) solid 3px;
+  background-color: var(--header-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+/* Styling for the featured art and latest creations sections */
+section#latest-creations {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: #1a1a1a solid 3px;
+  border-right: 0px;
+  border-left: 0px;
+}
+section#latest-shoptext-wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+/* Styling for the featured art gallery and latest creations gallery */
+div#featured-art-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+}
+section#featured-art {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border: #1a1a1a solid 3px;
+  border-top-width: 0px;
+  border-right: 0px;
+  border-left: 0px;
+}
+
+div#latest-creations-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+}
+/* Styling for the featured art images and latest creations images*/
+div.image-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+div.shop-image-wrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+img.featured-art-image {
+  width: 75%;
+  height: auto;
+  margin: 1rem;
+  border-radius: 1rem;
+  border:var(--header-color) solid 3px;
+  box-shadow: 4px 4px var(--header-color);
+}
+
+p.featured-art-text {
+  font-size: 1rem;
+  margin: 1rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+img.latest-creations-image {
+  width: 75%;
+  height: auto;
+  margin: 1rem;
+  border-radius: 1rem;
+  border:var(--header-color) solid 3px;
+  box-shadow: 4px 4px var(--header-color);
+}
+
+/* Styling for the footer section */
+section#footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header-color);
+  padding: 1rem;
+  margin: 0;
+}
+
+section#about-me {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+section#socialsandcontact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+section#contact-info {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+}
+
+section#contact-info-text {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+section#social-media-links {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+}
+
+img.social-icon {
+  width: 50px;
+  height: auto;
+  margin: 1rem;
+  border-radius: 0;
+}
+
+/* Styling for navigation menu */
+section#nav-menu {
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: var(--standard-padding);
+  margin: var(--standard-margin);
+  border-radius: var(--standard-border-radius);
+}
+/* Navigation menu initial state */
+nav#navigation {
+  position: absolute; /* Remove from normal flow */
+  top: 100%; /* Position it directly below the header */
+  left: 0;
+  width: 100%; /* Full width of the parent */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--header-color); /* Match header background */
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
+/* Visible state when 'invisible' class is removed */
+nav#navigation:not(.invisible) {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* Enable interaction when visible */
+}
+
+/* Invisible state */
+nav#navigation.invisible {
+  opacity: 0;
+  transform: translateY(-20px);
+  visibility: hidden;
 }

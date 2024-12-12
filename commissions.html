@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <!-- Links to google fonts and google icons following material design icon guidelines -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Poppins:ital,wght@0,300;0,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>That Artsy Hippie</title>
+    <!-- Note: this is for my gf and likely isn't going to be completely finished but I do intend for it to be a fully functional storefront eventually. -->
+</head>
+<body>
+    <!--Header container for the main headings (artist name/tagline) + nav grouping -->
+    <section class="header flex-container">
+        <section id="headings-container" class="flex-container">
+        <h1 id="artist-name" class="euphoria-script-regular">
+            Ella Murphy
+        </h1>
+        <p id="artist-tagline" class="poppins-bold-italic">@ThatArtsyHippie</p>
+        </section>
+     <!-- Nav opener button, will be used to open the nav on mobile -->
+        <section id="nav-menu" class="flex-container">
+            <button id="menu-opener" class="material-symbols-outlined">menu</button>
+            <!-- Nav, buttons link to other pages -->    
+            <nav id="navigation" class="flex-container invisible">
+                <a href="index.html" class="nav-item"><span class="material-symbols-outlined">
+                home
+                    </span> <p class="poppins-bold-italic">Home</p></a>
+                <a href="commissions.html" class="nav-item"><span class="material-symbols-outlined">
+                    sentiment_satisfied
+                    </span> <p class="poppins-bold-italic">Commissions</p></a>
+                <a href="sociallinks.html" class="nav-item"><span class="material-symbols-outlined">
+                    public
+                    </span> <p class="poppins-bold-italic">Social Media</p></a>
+                <a href="art-gallery.html" class="nav-item"><span class="material-symbols-outlined">
+                    palette
+                    </span> <p class="poppins-bold-italic">My Art</p></a>
+                <a href="shop.html" class="nav-item"><span class="material-symbols-outlined">
+                    shopping_cart
+                    </span> <p class="poppins-bold-italic">My Shop</p></a>
+            </nav>
+        </section>
+    </section>
+    <!-- Main content container, will be used for the main content of the page -->
+    <section id="main-content" class="flex-container">
+        
+    </section>
+    
+        <!-- Footer and its children -->
+        <section id="footer" class="flex-container">
+            <section id="about-me" class="flex-child">
+                <h2 class="poppins-black">About Me</h2>
+                <p class="poppins-regular">I have always been passionate about art and creativity, and I love using my talents to bring joy to others. 
+                I found resin art during a difficult period of my life, and it quickly became not only one of my favorite mediums but also a form of therapy for me.
+                I hope you enjoy my work as much as I enjoy creating it!</p>
+            </section>
+            <section id="socialsandcontact" class="flex-child">
+                <h2 class="poppins-black">Social Links</h2>
+                <section id="social-media-links">
+                    <a href="https://www.instagram.com/theartsyhippie" class="social-link"><img src="images/instagram-icon.png" alt="Instagram Icon" class="social-icon"></a>
+                    <a href="https://www.facebook.com/theartsyhippie" class="social-link"><img src="images/facebook-icon.png" alt="Facebook Icon" class="social-icon"></a>
+                    <a href="https://www.twitter.com/theartsyhippie" class="social-link"><img src="images/twitter-icon.png" alt="Twitter Icon" class="social-icon"></a>
+                </section>
+                <section id="contact-info" class="flex-child">
+                        <h2 class="poppins-black">Contact Info</h2>
+                        <section id="contact-info-text" class="flex-container">
+                            <p class="poppins-regular">Ella Murphy</p>
+                            <p class="poppins-regular">1234 Art Street</p>
+                            <p class="poppins-regular">City, State, Zip</p>
+                            <p class="poppins-regular">
+                                <a href="mailto:theartsyhippie@gmail.com"> my email :)</a>
+                            </p>
+                        </section>
+                    </section>
+            </section>
+        </section>    
+    <script src="script.js"></script>
+</body>
+</html>

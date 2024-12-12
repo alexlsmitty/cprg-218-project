@@ -7,47 +7,131 @@
     <!-- Links to google fonts and google icons following material design icon guidelines -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Poppins:ital,wght@0,300;0,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <title>The Artsy Hippie</title>
+    <title>That Artsy Hippie</title>
     <!-- Note: this is for my gf and likely isn't going to be completely finished but I do intend for it to be a fully functional storefront eventually. -->
 </head>
 <body>
     <!--Header container for the main headings (artist name/tagline) + nav grouping -->
-    <header class="top-container flex-container">
+    <section class="header flex-container">
         <section id="headings-container" class="flex-container">
-        <h1 id="artist-name">
+        <h1 id="artist-name" class="euphoria-script-regular">
             Ella Murphy
         </h1>
-        <p id="artist-tagline">Resin Artist, Jewelry Crafter, and Photographer</p>
+        <p id="artist-tagline" class="poppins-bold-italic">@ThatArtsyHippie</p>
         </section>
-    <!-- Nav, buttons link to other pages -->
-    <nav id="navigation" class="flex-container">
-        <a href="pages/index.html"><span class="material-symbols-outlined">
-            home
-            </span> <p>Home</p></a>
-        <a href="pages/commissions.html"><span class="material-symbols-outlined">
-            sentiment_satisfied
-            </span> <p>Commissions</p></a>
-        <a href="pages/social-links.html"><span class="material-symbols-outlined">
-            public
-            </span><p>Social Media</p></a>
-        <a href="pages/art-gallery.html"><span class="material-symbols-outlined">
-            palette
-            </span><p>My Art</p></a>
-        <a href="pages/shop.html"><span class="material-symbols-outlined">
-            shopping_cart
-            </span><p>My Shop</p></a>
-    </nav>
-    </header>
-
-    <section id="main-content" class="flex-container">
-        <section id="introhero" class="flex-child child-content">
-            
+     <!-- Nav opener button, will be used to open the nav on mobile -->
+        <section id="nav-menu" class="flex-container">
+            <button id="menu-opener" class="material-symbols-outlined">menu</button>
+            <!-- Nav, buttons link to other pages -->    
+            <nav id="navigation" class="flex-container invisible">
+                <a href="index.html" class="nav-item"><span class="material-symbols-outlined">
+                home
+                    </span> <p class="poppins-bold-italic">Home</p></a>
+                <a href="commissions.html" class="nav-item"><span class="material-symbols-outlined">
+                    sentiment_satisfied
+                    </span> <p class="poppins-bold-italic">Commissions</p></a>
+                <a href="sociallinks.html" class="nav-item"><span class="material-symbols-outlined">
+                    public
+                    </span> <p class="poppins-bold-italic">Social Media</p></a>
+                <a href="art-gallery.html" class="nav-item"><span class="material-symbols-outlined">
+                    palette
+                    </span> <p class="poppins-bold-italic">My Art</p></a>
+                <a href="shop.html" class="nav-item"><span class="material-symbols-outlined">
+                    shopping_cart
+                    </span> <p class="poppins-bold-italic">My Shop</p></a>
+            </nav>
         </section>
     </section>
-    
-    
-</body>
+    <!-- Main content container, will be used for the main content of the page -->
+    <section id="main-content" class="flex-container">
+        <section id="introhero" class="flex-child">
+            <h2 id="intro-text1" class="poppins-black">Art That Shines Brightly, Just Like You</h2>
+            <p id="intro-text2" class="poppins-regular">My name is Ella Murphy, and I am a resin artist, jewelry crafter, and photographer. 
+            I specialize in creating unique, one-of-a-kind pieces that are sure to make you stand out from the crowd. 
+            Take a look around my site to see some of my work, and feel free to reach out if you have any questions or would like to commission a piece. </p>
+            <a href="about.html"><button id="learn-more" class="poppins-bold-italic">Learn More</button></a>
+        </section>
+        
+        <section id="latest-creations" class="flex-child">
+            <section id="latest-shoptext-wrapper">
+                <h3 class="poppins-bold-italic">resin & jewelry</h3>
+                <h2 class="poppins-black">Newest Resin Art</h2>
+                <p class="poppins-regular">Here are my latest epoxy resin pieces, where I try to imbue a cottage-core, esoteric
+                    aesthetic into everything i make. 
+                    maybe with a few feminist-inspired pieces as well :) </p>
+            </section>
+            <div id="latest-creations-gallery" class="flex-container">
+                <div class="shop-image-wrapper">
+                    <img src="images/latest-creations-1.jpg" alt="Latest Creations 1" class="latest-creations-image">
+                    <p class="poppins-regular latest-creations-text">This piece is called "Moonlit Forest" and was inspired by the beauty of the natural world.</p>
+                </div>
+                <div class="shop-image-wrapper">
+                    <img src="images/latest-creations-2.jpg" alt="Latest Creations 2" class="latest-creations-image">
+                    <p class="poppins-regular latest-creations-text">This piece is called "Moonlit Forest" and was inspired by the beauty of the natural world.</p>
+                </div>
+                <div class="shop-image-wrapper">
+                    <img src="images/latest-creations-3.jpg" alt="Latest Creations 3" class="latest-creations-image">
+                    <p class="poppins-regular latest-creations-text">This piece is called "Moonlit Forest" and was inspired by the beauty of the natural world.</p>
+                </div>
+                <div class="shop-image-wrapper">
+                    <img src="images/latest-creations-4.jpg" alt="Latest Creations 4" class="latest-creations-image">
+                    <p class="poppins-regular latest-creations-text">This piece is called "Moonlit Forest" and was inspired by the beauty of the natural world.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured-art" class="flex-child">
+            <h2 class="poppins-black">Featured Art</h2>
+            <div id="featured-art-gallery" class="flex-container">
+                <div class="image-wrapper">
+                    <img src="images/featured-art-1.jpg" alt="Featured Art 1" class="featured-art-image">
+                    <p class="poppins-regular featured-art-text">This piece is called "Moonlit Forest" and was inspired by the beauty of the natural world.
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/featured-art-2.jpg" alt="Featured Art 2" class="featured-art-image">
+                    <p class="poppins-regular featured-art-text">This piece is called "Moonlit Forest" and was inspired by the beauty of the natural world. 
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/featured-art-3.jpg" alt="Featured Art 3" class="featured-art-image">
+                    <p class="poppins-regular featured-art-text">This piece is called "Moonlit Forest" and was inspired by the beauty of the natural world.
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/featured-art-4.jpg" alt="Featured Art 4" class="featured-art-image">
+                    <p class="poppins-regular featured-art-text">This piece is called "Moonlit Forest" and was inspired by the beauty of the natural world.
+                </div>
+            </div>
+        </section>
+        
+    </section>
+    <section id="footer" class="flex-container">
+        <section id="about-me" class="flex-child">
+            <h2 class="poppins-black">About Me</h2>
+            <p class="poppins-regular">I have always been passionate about art and creativity, and I love using my talents to bring joy to others. 
+            I found resin art during a difficult period of my life, and it quickly became not only one of my favorite mediums but also a form of therapy for me.
+            I hope you enjoy my work as much as I enjoy creating it!</p>
+        </section>
+        <section id="socialsandcontact" class="flex-child">
+            <h2 class="poppins-black">Social Links</h2>
+            <section id="social-media-links">
+                <a href="https://www.instagram.com/theartsyhippie" class="social-link"><img src="images/instagram-icon.jpeg" alt="Instagram Icon" class="social-icon"></a>
+                <a href="https://www.facebook.com/theartsyhippie" class="social-link"><img src="images/facebook-icon.jpeg" alt="Facebook Icon" class="social-icon"></a>
+                <a href="https://www.twitter.com/theartsyhippie" class="social-link"><img src="images/twitter-icon.jpeg" alt="Twitter Icon" class="social-icon"></a>
+            </section>
+            <section id="contact-info" class="flex-child">
+                    <h2 class="poppins-black">Contact Info</h2>
+                    <section id="contact-info-text" class="flex-container">
+                        <p class="poppins-regular">Ella Murphy</p>
+                        <p class="poppins-regular">1234 Art Street</p>
+                        <p class="poppins-regular">City, State, Zip</p>
+                        <p class="poppins-regular">
+                            <a href="mailto:theartsyhippie@gmail.com"> my email :)</a>
+                        </p>
+                    </section>
+                </section>
+        </section>
+    </section>
 <script src="script.js"></script>
+</body>
 </html>

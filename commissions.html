@@ -46,7 +46,41 @@
     </section>
     <!-- Main content container, will be used for the main content of the page -->
     <section id="main-content" class="flex-container">
+        <section id="form-content" class="flex-container">
+            <h2 class="poppins-black">Commissions</h2>
+            <p class="poppins-regular">Like my art? Have an idea for a piece you'd like to see made?
+                Use my commission form to request a custom piece made just for you!</p>
+            </p>
+            <form id="commissionForm">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
         
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label for="artType">Type of Art:</label><br>
+                <select id="artType" name="artType" required>
+                    <option value="portrait">Portrait</option>
+                    <option value="landscape">Landscape</option>
+                    <option value="custom">Custom</option>
+                </select><br><br>
+        
+                <label for="description">Description:</label><br>
+                <textarea id="description" name="description" rows="4"></textarea><br><br>
+        
+                <label for="size">Size:</label><br>
+                <select id="size" name="size" required>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select><br><br>
+        
+                <button type="submit" class="primary-button">Submit</button>
+            </form>
+        
+            <p id="responseMessage" style="color: green; display: none;">Your request has been submitted!</p>
+        
+        </section>
     </section>
     
         <!-- Footer and its children -->
@@ -76,7 +110,9 @@
                         </section>
                     </section>
             </section>
-        </section>    
+        </section>
+        <!-- Script tags for emailjs and the script file -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>    
     <script src="script.js"></script>
 </body>
 </html>

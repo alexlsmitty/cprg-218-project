@@ -6,7 +6,7 @@
   --primary-color: #f5f5dc; /* Off-white cream color */
   --header-color: #FFD700; /* Gold color */
   --secondary-color: #1a1a1a; /* Charcoal color */
-  --tertiary-color: #c91414; /* Cherry Red color */
+  --tertiary-color: #D2B48C; /* Light Taupe color */
   --quaternary-color: #024023; /* Forest Green color */
 
 }
@@ -60,8 +60,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-color);
-  overflow-x: hidden;
+  /*Added new background gradient to give a more artistic feel */
+  background: rgb(245,245,220);
+  background: linear-gradient(180deg, rgba(245,245,220,1) 0%, rgba(242,240,214,1) 45%, rgba(239,233,206,1) 65%, rgba(232,221,191,1) 79%, rgba(210,180,140,1) 100%);  overflow-x: hidden;
   padding: 0;
   margin: 0;
 }
@@ -73,6 +74,16 @@ img {
   border-radius: 3rem;
 }
 
+/* main-content styling, which is intended to be a mobile-first styling with checkpoints introduced later for larger screens. */
+section#main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
 /* Header and child element styling, also mobile friendly */
 section.header {
   position: sticky;
@@ -86,6 +97,7 @@ section.header {
   margin: 0;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
+  border-bottom: #1a1a1a solid 3px;
 }
 
 section#headings-container {
@@ -150,6 +162,16 @@ section#introhero {
   margin-bottom: 5%;
 }
 
+section#introhero2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 5%;
+}
+
 #intro-text1 {
   font-size: 2rem;
   margin: 1rem;
@@ -164,7 +186,28 @@ section#introhero {
   width: 80%;
 }
 
-button#learn-more {
+#intro-text-agal1 {
+  font-size: 2rem;
+  margin: 1rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+#intro-text-agal2 {
+  font-size: 1rem;
+  margin: 1rem;
+  color: var(--secondary-color);
+  text-align: center;
+  width: 80%;
+}
+#intro-text-agal3 {
+  font-size: 1rem;
+  margin: 1rem;
+  color: var(--secondary-color);
+  text-align: center;
+  width: 80%;
+}
+/* Button styling for the learn more button and other buttons on all pages*/
+button.primary-button {
   width: 30vw;
   height: 50px;
   justify-self: center;
@@ -251,7 +294,23 @@ img.featured-art-image {
   border:var(--header-color) solid 3px;
   box-shadow: 4px 4px var(--header-color);
 }
-
+image.art-image {
+  width: 60%;
+  height: auto;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+div.image-wrapper {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 1rem;
+  border:var(--header-color) solid 3px;
+  box-shadow: 4px 4px var(--header-color);
+}
 p.featured-art-text {
   font-size: 1rem;
   margin: 1rem;
@@ -268,6 +327,20 @@ img.latest-creations-image {
   box-shadow: 4px 4px var(--header-color);
 }
 
+/*Styling for the imagegroup-container class used on the gallery pages */
+div.imagegroup-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  border: #1a1a1a solid 3px;
+  padding: 1rem;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
+}
 /* Styling for the footer section */
 section#footer {
   width: 100vw;
@@ -332,6 +405,64 @@ img.social-icon {
   border-radius: 0;
 }
 
+/* Styling for the commissions page */
+section#form-content {
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+form {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0.5rem;
+}
+textarea {
+  width: 90%;
+  height: 100px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: var(--secondary-color) solid 3px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+input {
+  width: 60%;
+  height: 50px;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: var(--secondary-color) solid 3px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+select {
+  width: 60%;
+  height: 50px;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: var(--secondary-color) solid 3px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
 /* Styling for navigation menu */
 section#nav-menu {
   position: relative; 
@@ -342,6 +473,17 @@ section#nav-menu {
   padding: var(--standard-padding);
   margin: var(--standard-margin);
   border-radius: var(--standard-border-radius);
+}
+/*Navigation menu item styling */
+a.nav-item {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  cursor: pointer;
 }
 /* Navigation menu initial state */
 nav#navigation {
@@ -354,6 +496,7 @@ nav#navigation {
   align-items: center;
   background-color: var(--header-color); /* Match header background */
   opacity: 0;
+  border-bottom: #1a1a1a solid 3px;
   transform: translateY(-20px);
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   pointer-events: none; /* Prevent interaction when hidden */
@@ -371,4 +514,27 @@ nav#navigation.invisible {
   opacity: 0;
   transform: translateY(-20px);
   visibility: hidden;
+}
+/*hover states for applicable elements such as buttons, nav-items, etc. */
+
+button#menu-opener:hover {
+  transition: ease-out 0.15s;
+  background-color: var(--secondary-color);
+  color: var(--header-color);
+}
+button.primary-button:hover {
+  transition: ease-out 0.15s;
+  background-color: var(--secondary-color);
+  color: var(--header-color);
+}
+a.nav-item:hover {
+  transition: ease-out 0.15s;
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+}
+a.nav-item:hover span {
+  color: var(--header-color);
+}
+a.nav-item:hover p {
+  color: var(--header-color);
 }

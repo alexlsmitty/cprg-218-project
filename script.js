@@ -10,13 +10,15 @@ menuOpener.addEventListener('click', () => {
 
 // Handling form submission with EmailJS
 document.addEventListener('DOMContentLoaded', function () {
-    emailjs.init("alexlsmitty"); //EmailJS user ID
+    emailjs.init("h5Ey-krXzE_bUHxyL"); //EmailJS user ID
 
     const form = document.getElementById('commissionForm');
     const responseMessage = document.getElementById('responseMessage');
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
+
+        const formData = new FormData(form);
 
         // Preparing data for EmailJS
         const emailData = {
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             size: formData.get("size"),
         };
 
-        emailjs.sendForm('service_hltaybp', 'template_koj6ec7', this)
+        emailjs.sendForm('service_hltaybp', 'template_koj6ec7', emailData)
         .then(() => {
             responseMessage.style.display = "block";
             responseMessage.textContent = "Your request has been submitted!";
